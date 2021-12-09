@@ -1,0 +1,73 @@
+export const datasCours = [
+  {
+    id: "1",
+    name: "Cours",
+    difficulty: 1,
+    category: "Vocab",
+    description:
+      "Apprenez du vocabulaire facile.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  },
+  {
+    id: "2",
+    name: "Cours",
+    difficulty: 1,
+    category: "Conjugaison",
+    description: "Apprenez du vocabulaire facile.",
+  },
+  {
+    id: "3",
+    name: "Cours",
+    difficulty: 2,
+    category: "Conjugaison",
+    description: "Apprenez du vocabulaire moyen.",
+  },
+  {
+    id: "4",
+    name: "Cours",
+    difficulty: 2,
+    category: "Vocab",
+    description: "Apprenez du vocabulaire moyen.",
+  },
+  {
+    id: "6",
+    name: "Cours",
+    difficulty: 2,
+    category: "Conjugaison",
+    description: "Apprenez du vocabulaire moyen.",
+  },
+  {
+    id: "7",
+    name: "Cours",
+    difficulty: 3,
+    category: "Vocab",
+    description: "Apprenez du vocabulaire difficile.",
+  },
+  {
+    id: "8",
+    name: "Cours",
+    difficulty: 3,
+    category: "Conjugaison",
+    description: "Apprenez du vocabulaire difficile.",
+  },
+  {
+    id: "9",
+    name: "Cours",
+    difficulty: 3,
+    category: "Vocab",
+    description: "Apprenez du vocabulaire difficile.",
+  },
+  {
+    id: "10",
+    name: "Cours",
+    difficulty: 4,
+    category: "Conjugaison",
+    description: "Apprenez du vocabulaire natif.",
+  },
+  {
+    id: "11",
+    name: "Cours",
+    difficulty: 4,
+    category: "Vocab",
+    description: "Apprenez du vocabulaire natif.",
+  },
+];
