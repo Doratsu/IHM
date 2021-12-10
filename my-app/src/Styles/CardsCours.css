@@ -1,0 +1,63 @@
+.Row {
+  text-align: center;
+  --bs-gutter-x: 0;
+}
+
+.Col {
+  padding: 20px;
+}
+
+.Card {
+  width: 30%;
+  margin: 10px;
+  border: 1px solid black;
+  /*display: inline-block;*/
+}
+
+.Card-Header {
+  background-color: #212529;
+  padding: 8px;
+}
+
+.Nav-Item:hover {
+  background-color: #0d6efd;
+  border-radius: 0.25rem;
+}
+
+.Nav-Link:hover {
+  color: black;
+  font-family: bold;
+}
+
+.Card-Body {
+  color: white;
+  background-color: #212529;
+}
+
+.Card-Title {
+  display: inline-block;
+}
+
+.Card-Title:hover {
+  cursor: pointer;
+  text-decoration: underline white;
+}
+
+.Card-Text {
+  padding-top: 10px;
+  margin: 2px;
+}
+
+.Card-Text-Desc {
+  margin-top: 15px;
+}
+
+#TitreCategorie {
+  padding-top: 2%;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.Card-Button {
+  text-align: center;
+}

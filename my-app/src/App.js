@@ -21,3 +21,9 @@ export default class App extends React.Component {
     );
   }
 }
+
+/*
+ *npm install
+ *npm install react-bootstrap
+ *npm install react-router-dom
+ */

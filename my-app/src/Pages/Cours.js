@@ -1,32 +1,29 @@
 import React, { Component } from "react";
-import { Row, Col, Container } from "react-bootstrap";
 
 import "../Styles/Cours.css";
 
 import { datasCours } from "../Datas/datasCours";
-import Cards from "../Components/Cards";
+import CardsCours from "../Components/CardsCours";
+import MenuList from "../Components/MenuList";
 
 export default class Cours extends Component {
   render() {
+    const categories = datasCours.reduce((allCours, current) => {
+      return allCours.includes(current.category)
+        ? allCours
+        : allCours.concat([current.category]);
+    }, []);
+
     return (
-      <Container>
-        <Row className="Row" xs={1} md={1}>
-          <h1 id="TitreCategorie">Vocabulaire</h1>
-          <Col className="Col">
-            {datasCours.map(
-              ({ id, name, difficulty, category, description }) => (
-                <Cards
-                  id={id}
-                  name={name}
-                  difficulty={difficulty}
-                  category={category}
-                  description={description}
-                />
-              )
-            )}
-          </Col>
-        </Row>
-      </Container>
+      <div>
+        <MenuList />
+        {categories.map((category) => {
+          const datasCoursFiltered = datasCours.filter(
+            (prod) => prod.category === category
+          );
+          return <CardsCours datasCours={datasCoursFiltered} />;
+        })}
+      </div>
     );
   }
 }
