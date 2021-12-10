@@ -4,7 +4,7 @@ import "../Styles/MenuList.css";
 export default class MenuList extends Component {
   render() {
     return (
-      <div>
+      <div id="MenuList-Container">
         <ul>
           <li>
             <a href="#Vocab">Vocab</a>

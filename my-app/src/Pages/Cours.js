@@ -7,6 +7,13 @@ import CardsCours from "../Components/CardsCours";
 import MenuList from "../Components/MenuList";
 
 export default class Cours extends Component {
+  constructor(props, context) {
+    super(props, context);
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    console.log("Cliqué");
+  }
   render() {
     const categories = datasCours.reduce((allCours, current) => {
       return allCours.includes(current.category)
@@ -21,7 +28,12 @@ export default class Cours extends Component {
           const datasCoursFiltered = datasCours.filter(
             (prod) => prod.category === category
           );
-          return <CardsCours datasCours={datasCoursFiltered} />;
+          return (
+            <CardsCours
+              datasCours={datasCoursFiltered}
+              onClick={this.handleClick.bind(this)}
+            />
+          );
         })}
       </div>
     );

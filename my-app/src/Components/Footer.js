@@ -14,7 +14,7 @@ export default class Footer extends Component {
               className="footer-input"
               name="email"
               type="email"
-              placeholder="Adresse Email"
+              placeholder="Adresse Mail"
             />
             <Button variant="outline-success" className="footer-Button">
               S'abonner

@@ -3,7 +3,14 @@ export const datasDecouv = [
     id: "1",
     name: "Foot",
     category: "Sport",
-    description: "Actualité sur Foot",
+    description: (
+      <p>
+        Actualité sur Foot
+        <p id="Description-Decouv">
+          Petit Descriptif de ce que contient l'article
+        </p>
+      </p>
+    ),
   },
   {
     id: "2",

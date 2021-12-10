@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../Styles/Home.css";
+import "../Styles/Outils.css";
 
-export default class Home extends Component {
+export default class Outils extends Component {
   render() {
     return (
       <div>
-        <h1>Select your language at the top right</h1>
+        <h1>Vous etes sur la page Outils</h1>
       </div>
     );
   }

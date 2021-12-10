@@ -47,7 +47,9 @@ export default function CardsCours(props) {
                 <CoursItem difficulty={difficulty} />
                 <Card.Text className="Card-Text-Desc">{description}</Card.Text>
                 <div className="Card-Button">
-                  <Button variant="outline-success">Commencer</Button>
+                  <Button variant="outline-success" onClick={props.handleClick}>
+                    Commencer
+                  </Button>
                 </div>
               </Card.Body>
             </Card>

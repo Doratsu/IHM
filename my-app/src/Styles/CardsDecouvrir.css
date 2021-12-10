@@ -7,6 +7,17 @@
   padding: 20px;
 }
 
+#TitreCategorie-Decouv {
+  margin: 0px;
+  padding-bottom: 0px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#TitreCategorie-Decouv:hover {
+  /*color: lightgray;*/
+}
+
 .Card-Decouv {
   margin: 10px;
   border: 1px solid black;
@@ -16,6 +27,11 @@
 
 .Card-Image-Decouv {
   float: right;
+  width: 60%;
+}
+
+.Card-Image-Decouv:hover {
+  -webkit-transform: scale(1.01);
 }
 
 .Nav-Item-Decouv:hover {
@@ -42,17 +58,15 @@
   text-decoration: underline white;
 }
 
-.Card-Text-Decouv {
-  padding-top: 10px;
-  margin: 2px;
-}
-
 .Card-Text-Desc-Decouv {
   margin-top: 15px;
 }
 
-#TitreCategorie-Decouv {
-  padding-top: 2%;
-  text-decoration: underline;
-  font-weight: bold;
+.Card-Text-Decouv {
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+#Description-Decouv {
+  margin-top: 20px;
 }
