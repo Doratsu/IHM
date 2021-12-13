@@ -1,5 +1,6 @@
-import { Card, Button, Nav, Row, Col, Container } from "react-bootstrap";
+import { Card, Nav, Row, Col, Container } from "react-bootstrap";
 
+import { Link } from "react-router-dom";
 import "../Styles/CardsCours.css";
 
 import CoursItem from "./CoursItem";
@@ -13,7 +14,7 @@ export default function CardsCours(props) {
         key={firstCours.id}
         className={
           "product " +
-          (firstCours.category === "Vocab"
+          (firstCours.category === "Vocabulaire"
             ? "first"
             : firstCours.category === "Conjugaison"
             ? "second"
@@ -29,12 +30,23 @@ export default function CardsCours(props) {
               <Card.Header className="Card-Header">
                 <Nav justify variant="pill" defaultActiveKey="#first">
                   <Nav.Item className="Nav-Item">
-                    <Nav.Link href="#first" className="Nav-Link">
-                      Cours
+                    <Nav.Link
+                      as={Link}
+                      to={"/Lecon".concat(id)}
+                      href="#first"
+                      className="Nav-Link"
+                    >
+                      Leçon
                     </Nav.Link>
                   </Nav.Item>
                   <Nav.Item className="Nav-Item">
-                    <Nav.Link className="Nav-Link">Exos</Nav.Link>
+                    <Nav.Link
+                      as={Link}
+                      to={"/Exercice".concat(id)}
+                      className="Nav-Link"
+                    >
+                      Exercices
+                    </Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Card.Header>
@@ -46,11 +58,6 @@ export default function CardsCours(props) {
                 <Card.Text className="Card-Text">Niveau</Card.Text>
                 <CoursItem difficulty={difficulty} />
                 <Card.Text className="Card-Text-Desc">{description}</Card.Text>
-                <div className="Card-Button">
-                  <Button variant="outline-success" onClick={props.handleClick}>
-                    Commencer
-                  </Button>
-                </div>
               </Card.Body>
             </Card>
           ))}

@@ -1,0 +1,13 @@
+#LeconTextContainer {
+  height: 100%;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-bottom: 80%;
+  border-radius: 10px;
+  background-color: rgb(176, 206, 224);
+}
+
+#LeconText {
+  padding-top: 10px;
+  text-align: center;
+}

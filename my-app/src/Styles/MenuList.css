@@ -1,9 +1,85 @@
 ul {
   list-style-type: none;
+  padding-left: 20px;
+}
+li {
+  list-style-type: none;
+  padding-left: 40px;
 }
 
 #MenuList-Container {
   padding-top: 8px;
   position: sticky;
+  display: block;
+  float: left;
   top: 56px;
+  width: 250px;
+}
+
+a {
+  color: #212529;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#MenuListTilte {
+  margin-bottom: 6px;
+  margin-top: 6px;
+  font-size: 2rem;
+  float: left;
+  clear: both;
+  display: block;
+  word-break: break-all;
+}
+
+#MenuListTilte:hover {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: 10px;
+  margin-right: 8px;
+  border-radius: 10px;
+  background-color: #3d7ba5;
+  font-weight: bold;
+}
+
+#MenuListItem {
+  margin-bottom: 3px;
+  margin-top: 3px;
+  float: left;
+  clear: both;
+  display: block;
+  word-break: break-all;
+}
+
+#MenuListItem:hover {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: 10px;
+  margin-right: 8px;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: rgb(61, 123, 164);
+  font-weight: bold;
+}
+
+#MenuListAnchor:hover {
+  color: #212529;
+}
+#MenuListItem:hover:before {
+  content: "⮞  ";
+  font-weight: bold;
+}
+
+hr {
+  clear: both;
+  display: block;
+  color: #212529;
+  background-color: #212529;
+  padding: 3px;
+  opacity: 100;
+  border-radius: 4px;
+  width: fit-content;
+  height: 20px;
+  padding-left: 200px;
+  margin-bottom: 10px;
 }

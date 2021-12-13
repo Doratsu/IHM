@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-import "../Styles/Cours.css";
+import "../../Styles/Cours.css";
 
-import { datasCours } from "../Datas/datasCours";
-import CardsCours from "../Components/CardsCours";
-import MenuList from "../Components/MenuList";
+import { datasCours } from "../../Datas/datasCours";
+import CardsCours from "../../Components/CardsCours";
+import MenuListCours from "../../Components/MenuListCours";
 
 export default class Cours extends Component {
   constructor(props, context) {
@@ -23,7 +23,7 @@ export default class Cours extends Component {
 
     return (
       <div>
-        <MenuList />
+        <MenuListCours />
         {categories.map((category) => {
           const datasCoursFiltered = datasCours.filter(
             (prod) => prod.category === category

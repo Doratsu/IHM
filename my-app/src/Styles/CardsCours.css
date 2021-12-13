@@ -20,13 +20,18 @@
 }
 
 .Nav-Item:hover {
-  background-color: #0d6efd;
+  background-color: #3b80e7;
   border-radius: 0.25rem;
 }
 
+.Nav-Link {
+  color: #3b80e7;
+}
 .Nav-Link:hover {
-  color: black;
+  color: white;
   font-family: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .Card-Body {
@@ -50,6 +55,7 @@
 
 .Card-Text-Desc {
   margin-top: 15px;
+  padding-bottom: 15px;
 }
 
 #TitreCategorie {

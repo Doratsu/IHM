@@ -1,13 +1,12 @@
 import React, { Component } from "react";
-
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../Styles/Outils.css";
+import "../../Styles/Lecon.css";
 
-export default class Outils extends Component {
+export default class Lecon2 extends Component {
   render() {
     return (
       <div>
-        <h1>Vous etes sur la page Outils</h1>
+        <h1>Lesson 2 here soon</h1>
       </div>
     );
   }

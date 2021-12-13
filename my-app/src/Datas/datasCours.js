@@ -3,7 +3,7 @@ export const datasCours = [
     id: "1",
     name: "Cours",
     difficulty: 1,
-    category: "Vocab",
+    category: "Vocabulaire",
     description: "Apprenez du vocabulaire facile.",
   },
   {
@@ -24,7 +24,7 @@ export const datasCours = [
     id: "4",
     name: "Cours",
     difficulty: 2,
-    category: "Vocab",
+    category: "Vocabulaire",
     description: "Apprenez du vocabulaire moyen.",
   },
   {
@@ -38,7 +38,7 @@ export const datasCours = [
     id: "7",
     name: "Cours",
     difficulty: 3,
-    category: "Vocab",
+    category: "Vocabulaire",
     description: "Apprenez du vocabulaire difficile.",
   },
   {
@@ -52,7 +52,7 @@ export const datasCours = [
     id: "9",
     name: "Cours",
     difficulty: 3,
-    category: "Vocab",
+    category: "Vocabulaire",
     description: "Apprenez du vocabulaire difficile.",
   },
   {
@@ -66,7 +66,7 @@ export const datasCours = [
     id: "11",
     name: "Cours",
     difficulty: 4,
-    category: "Vocab",
+    category: "Vocabulaire",
     description: "Apprenez du vocabulaire natif.",
   },
 ];

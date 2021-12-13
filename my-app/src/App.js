@@ -10,11 +10,11 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
+        <PopUp />
         <div id="page-container">
           <div id="content-wrap">
             <TopNavBar />
           </div>
-          <PopUp />
           <Footer />
         </div>
       </div>

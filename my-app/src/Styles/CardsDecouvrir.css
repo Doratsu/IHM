@@ -14,10 +14,6 @@
   font-weight: bold;
 }
 
-#TitreCategorie-Decouv:hover {
-  /*color: lightgray;*/
-}
-
 .Card-Decouv {
   margin: 10px;
   border: 1px solid black;
@@ -28,6 +24,8 @@
 .Card-Image-Decouv {
   float: right;
   width: 60%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .Card-Image-Decouv:hover {
@@ -47,6 +45,13 @@
 .Card-Body-Decouv {
   color: white;
   background-color: #212529;
+  height: 350px;
+}
+
+.Card-Body-Decouv:hover {
+  border-radius: 0.25rem;
+  border: 1px solid black;
+  -webkit-transform: scale(1.05);
 }
 
 .Card-Title-Decouv {
@@ -62,11 +67,11 @@
   margin-top: 15px;
 }
 
-.Card-Text-Decouv {
-  padding-top: 10px;
+#Description-Decouv {
   margin-top: 20px;
 }
 
-#Description-Decouv {
-  margin-top: 20px;
+a.Card-Body-Decouv.card-body {
+  color: white;
+  text-decoration: none;
 }
