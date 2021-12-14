@@ -1,16 +1,19 @@
 .Row-Decouv {
   text-align: center;
   --bs-gutter-x: 0;
+  padding-top: 60px;
+  justify-content: center;
 }
 
 .Col-Decouv {
   padding: 20px;
+  justify-content: center;
+  text-decoration: underline;
 }
 
 #TitreCategorie-Decouv {
   margin: 0px;
   padding-bottom: 0px;
-  text-decoration: underline;
   font-weight: bold;
 }
 
@@ -19,6 +22,7 @@
   border: 1px solid black;
   /*display: flex;*/
   width: 100%;
+  background-color: #212529;
 }
 
 .Card-Image-Decouv {
@@ -59,8 +63,7 @@
 }
 
 .Card-Title-Decouv:hover {
-  cursor: pointer;
-  text-decoration: underline white;
+  text-decoration: white;
 }
 
 .Card-Text-Desc-Decouv {

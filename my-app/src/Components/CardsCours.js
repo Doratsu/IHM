@@ -23,8 +23,9 @@ export default function CardsCours(props) {
       ></section>
       <Container>
         <Row className="Row" xs={1} md={1}>
-          <h1 id={`${firstCours.category}`}>{firstCours.category}</h1>
-          <Col className="Col"></Col>
+          <Col className="Col">
+            <h1 id={`${firstCours.category}`}>{firstCours.category}</h1>
+          </Col>
           {datasCours.map(({ id, name, difficulty, description }) => (
             <Card className="Card">
               <Card.Header className="Card-Header">

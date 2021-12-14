@@ -1,0 +1,46 @@
+#LexicalGrid {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 20px;
+  justify-content: flex-end;
+}
+
+#LexicalTitle {
+  color: #212529;
+  text-align: center;
+  padding-top: 60px;
+  text-decoration: underline;
+}
+.LexicalTitle {
+  color: #212529;
+  text-align: center;
+  padding-top: 60px;
+  text-decoration: underline;
+}
+
+#LexicalItem {
+  background-color: #212529;
+  color: white;
+  text-align: center;
+}
+
+#LexicalIcon {
+  color: white;
+  margin-left: 250px;
+}
+
+.Row-Decouv {
+  text-align: center;
+  --bs-gutter-x: 0;
+}
+
+.Col-Decouv {
+  padding: 20px;
+}
+
+#OutilsHr {
+  margin-top: 60px;
+  margin-bottom: 0;
+  width: 100%;
+  height: 10px;
+}

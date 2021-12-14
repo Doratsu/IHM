@@ -28,17 +28,20 @@ export default class TopNavBar extends Component {
     this.state = {
       name: "Your Language",
       link: "/",
-      value: "",
+      value: true,
     };
   }
 
   setLangue() {
+    this.setBtnDisable();
     this.setState({ name: "Your Language", link: "/anglais" });
   }
   setLangueAnglais() {
-    this.setState({ name: "Anglais", link: "/anglais" });
+    this.setBtnEnable();
+    this.setState({ name: "English", link: "/anglais" });
   }
   setLangueFrancais() {
+    this.setBtnEnable();
     this.setState({ name: "Francais", link: "/francais" });
   }
   setBtnDisable() {
@@ -48,7 +51,7 @@ export default class TopNavBar extends Component {
     this.setState({ value: false });
   }
   render() {
-    if (this.state.link === "/" && this.state.name === "Your Language") {
+    if (this.state.link === "/") {
       return (
         <Router>
           <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
@@ -57,32 +60,20 @@ export default class TopNavBar extends Component {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link
-                    disabled={(this.state.value = false)}
-                    as={Link}
-                    to={this.state.link}
-                  >
+                  <Nav.Link disabled={false} as={Link} to={this.state.link}>
                     Home
                   </Nav.Link>
-                  <Nav.Link
-                    disabled={(this.state.value = true)}
-                    as={Link}
-                    to="/Cours"
-                  >
+                  <Nav.Link disabled={this.state.value} as={Link} to="/Cours">
                     Teachings
                   </Nav.Link>
                   <Nav.Link
-                    disabled={(this.state.value = true)}
+                    disabled={this.state.value}
                     as={Link}
                     to="/Decouvrir"
                   >
                     Discover
                   </Nav.Link>
-                  <Nav.Link
-                    disabled={(this.state.value = true)}
-                    as={Link}
-                    to="/Outils"
-                  >
+                  <Nav.Link disabled={this.state.value} as={Link} to="/Outils">
                     Tools
                   </Nav.Link>
                 </Nav>
@@ -90,13 +81,8 @@ export default class TopNavBar extends Component {
             </Container>
             <NavDropdown title={this.state.name} id="basic-langue-nav-dropdown">
               <div>
-                <NavDropdown.Item
-                  as={Link}
-                  to="/"
-                  onClick={this.setLangue}
-                  onClick={this.setBtnDisable}
-                >
-                  None
+                <NavDropdown.Item as={Link} to="/" onClick={this.setLangue}>
+                  Default
                 </NavDropdown.Item>
               </div>
               <div>
@@ -104,7 +90,6 @@ export default class TopNavBar extends Component {
                   as={Link}
                   to="/anglais"
                   onClick={this.setLangueAnglais}
-                  onClick={this.setBtnEnable}
                 >
                   English
                 </NavDropdown.Item>
@@ -114,7 +99,6 @@ export default class TopNavBar extends Component {
                   as={Link}
                   to="/francais"
                   onClick={this.setLangueFrancais}
-                  onClick={this.setBtnEnable}
                 >
                   French
                 </NavDropdown.Item>
@@ -146,10 +130,7 @@ export default class TopNavBar extends Component {
           </div>
         </Router>
       );
-    } else if (
-      this.state.link === "/anglais" &&
-      this.state.name === "Anglais"
-    ) {
+    } else if (this.state.link === "/anglais") {
       return (
         <Router>
           <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
@@ -158,32 +139,20 @@ export default class TopNavBar extends Component {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link
-                    disabled={(this.state.value = false)}
-                    as={Link}
-                    to={this.state.link}
-                  >
+                  <Nav.Link disabled={false} as={Link} to={this.state.link}>
                     Home
                   </Nav.Link>
-                  <Nav.Link
-                    disabled={(this.state.value = false)}
-                    as={Link}
-                    to="/Cours"
-                  >
+                  <Nav.Link disabled={this.state.value} as={Link} to="/Cours">
                     Teachings
                   </Nav.Link>
                   <Nav.Link
-                    disabled={(this.state.value = false)}
+                    disabled={this.state.value}
                     as={Link}
                     to="/Decouvrir"
                   >
                     Discover
                   </Nav.Link>
-                  <Nav.Link
-                    disabled={(this.state.value = false)}
-                    as={Link}
-                    to="/Outils"
-                  >
+                  <Nav.Link disabled={this.state.value} as={Link} to="/Outils">
                     Tools
                   </Nav.Link>
                 </Nav>
@@ -191,13 +160,8 @@ export default class TopNavBar extends Component {
             </Container>
             <NavDropdown title={this.state.name} id="basic-langue-nav-dropdown">
               <div>
-                <NavDropdown.Item
-                  as={Link}
-                  to="/"
-                  onClick={this.setLangue}
-                  onClick={this.setBtnDisable}
-                >
-                  None
+                <NavDropdown.Item as={Link} to="/" onClick={this.setLangue}>
+                  Default
                 </NavDropdown.Item>
               </div>
               <div>
@@ -205,7 +169,6 @@ export default class TopNavBar extends Component {
                   as={Link}
                   to="/anglais"
                   onClick={this.setLangueAnglais}
-                  onClick={this.setBtnEnable}
                 >
                   English
                 </NavDropdown.Item>
@@ -215,7 +178,6 @@ export default class TopNavBar extends Component {
                   as={Link}
                   to="/francais"
                   onClick={this.setLangueFrancais}
-                  onClick={this.setBtnEnable}
                 >
                   French
                 </NavDropdown.Item>
@@ -247,10 +209,7 @@ export default class TopNavBar extends Component {
           </div>
         </Router>
       );
-    } else if (
-      this.state.link === "/francais" &&
-      this.state.name === "Francais"
-    ) {
+    } else if (this.state.link === "/francais") {
       return (
         <Router>
           <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
@@ -259,32 +218,20 @@ export default class TopNavBar extends Component {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
-                  <Nav.Link
-                    disabled={(this.state.value = false)}
-                    as={Link}
-                    to={this.state.link}
-                  >
+                  <Nav.Link disabled={false} as={Link} to={this.state.link}>
                     Accueil
                   </Nav.Link>
-                  <Nav.Link
-                    disabled={(this.state.value = false)}
-                    as={Link}
-                    to="/Cours"
-                  >
+                  <Nav.Link disabled={this.state.value} as={Link} to="/Cours">
                     Cours
                   </Nav.Link>
                   <Nav.Link
-                    disabled={(this.state.value = false)}
+                    disabled={this.state.value}
                     as={Link}
                     to="/Decouvrir"
                   >
                     Découvrir
                   </Nav.Link>
-                  <Nav.Link
-                    disabled={(this.state.value = false)}
-                    as={Link}
-                    to="/Outils"
-                  >
+                  <Nav.Link disabled={this.state.value} as={Link} to="/Outils">
                     Outils
                   </Nav.Link>
                 </Nav>
@@ -292,13 +239,8 @@ export default class TopNavBar extends Component {
             </Container>
             <NavDropdown title={this.state.name} id="basic-langue-nav-dropdown">
               <div>
-                <NavDropdown.Item
-                  as={Link}
-                  to="/"
-                  onClick={this.setLangue}
-                  onClick={this.setBtnDisable}
-                >
-                  None
+                <NavDropdown.Item as={Link} to="/" onClick={this.setLangue}>
+                  Default
                 </NavDropdown.Item>
               </div>
               <div>
@@ -306,7 +248,6 @@ export default class TopNavBar extends Component {
                   as={Link}
                   to="/anglais"
                   onClick={this.setLangueAnglais}
-                  onClick={this.setBtnEnable}
                 >
                   Anglais
                 </NavDropdown.Item>
@@ -316,7 +257,6 @@ export default class TopNavBar extends Component {
                   as={Link}
                   to="/francais"
                   onClick={this.setLangueFrancais}
-                  onClick={this.setBtnEnable}
                 >
                   Francais
                 </NavDropdown.Item>

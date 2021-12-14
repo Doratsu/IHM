@@ -6,7 +6,7 @@ export default class Exercice1 extends Component {
   render() {
     return (
       <div>
-        <h1>Exercice 1 here soon</h1>
+        <h1 className="ExTitle">Exercice 1 here soon</h1>
       </div>
     );
   }

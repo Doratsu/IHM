@@ -7,7 +7,7 @@ export default class MenuListCours extends Component {
       <div id="MenuList-Container">
         <ul>
           <li id="MenuListTilte">
-            <a href="#" id="MenuListAnchor">
+            <a href="#top" id="MenuListAnchor">
               Cours
             </a>
           </li>

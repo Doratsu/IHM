@@ -1,17 +1,25 @@
 .Row {
   text-align: center;
   --bs-gutter-x: 0;
+  padding-top: 60px;
+  justify-content: center;
 }
 
 .Col {
   padding: 20px;
+  justify-content: center;
+  text-decoration: underline;
 }
 
 .Card {
   width: 30%;
   margin: 10px;
   border: 1px solid black;
-  /*display: inline-block;*/
+  background-color: #212529;
+}
+
+.Card:hover {
+  -webkit-transform: scale(1.02);
 }
 
 .Card-Header {
@@ -43,11 +51,6 @@
   display: inline-block;
 }
 
-.Card-Title:hover {
-  cursor: pointer;
-  text-decoration: underline white;
-}
-
 .Card-Text {
   padding-top: 10px;
   margin: 2px;
@@ -62,8 +65,4 @@
   padding-top: 2%;
   text-decoration: underline;
   font-weight: bold;
-}
-
-.Card-Button {
-  text-align: center;
 }

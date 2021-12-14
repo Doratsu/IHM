@@ -1,12 +1,20 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../Styles/Lecon.css";
+import { Card, Container } from "react-bootstrap";
 
 export default class Lecon2 extends Component {
   render() {
     return (
       <div>
-        <h1>Lesson 2 here soon</h1>
+        <h1 className="LeconTitle">Lesson 2 here soon</h1>
+        <Container>
+          <Card className="LeconCard">
+            <Card.Body className="LeconCardBody">
+              <p id="LeconText">Pour commencer ...</p>
+            </Card.Body>
+          </Card>
+        </Container>
       </div>
     );
   }

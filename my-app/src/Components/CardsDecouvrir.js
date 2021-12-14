@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -24,8 +24,9 @@ export default function CardsDecouvrir(props) {
       ></section>
       <Container>
         <Row className="Row-Decouv" xs={1} md={1}>
-          <h1 id={`${firstDecouv.category}`}>{firstDecouv.category}</h1>
-          <Col className="Col-Decouv"></Col>
+          <Col className="Col-Decouv">
+            <h1 id={`${firstDecouv.category}`}>{firstDecouv.category}</h1>
+          </Col>
           {datasDecouv.map(({ id, name, description }) => (
             <Card className="Card-Decouv">
               <Card.Body
