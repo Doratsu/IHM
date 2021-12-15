@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import "../Styles/CardsDecouvrir.css";
 
-import ScrollToTop from "./ScrollToTop";
+/*import ScrollToTop from "./ScrollToTop";*/
 
 export default function CardsDecouvrir(props) {
   const { datasDecouv } = props;
@@ -23,9 +23,14 @@ export default function CardsDecouvrir(props) {
         }
       ></section>
       <Container>
-        <Row className="Row-Decouv" xs={1} md={1}>
+        <Row
+          id={`${firstDecouv.category}`}
+          className="Row-Decouv"
+          xs={1}
+          md={1}
+        >
           <Col className="Col-Decouv">
-            <h1 id={`${firstDecouv.category}`}>{firstDecouv.category}</h1>
+            <h1>{firstDecouv.category}</h1>
           </Col>
           {datasDecouv.map(({ id, name, description }) => (
             <Card className="Card-Decouv">
@@ -33,7 +38,7 @@ export default function CardsDecouvrir(props) {
                 className="Card-Body-Decouv"
                 as={Link}
                 to={"/Article".concat(name)}
-                onClick={ScrollToTop}
+                /*onClick={ScrollToTop}*/
               >
                 <Card.Title id={name} className="Card-Title-Decouv">
                   {name}

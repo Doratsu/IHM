@@ -7,7 +7,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div id="footer">
-        <p>Abonnez vous pour recevoir les nouveautées</p>
+        <p>Abonnez vous pour recevoir les nouveautés</p>
         <div className="input-areas">
           <form>
             <input

@@ -32,10 +32,6 @@
   object-fit: cover;
 }
 
-.Card-Image-Decouv:hover {
-  -webkit-transform: scale(1.01);
-}
-
 .Nav-Item-Decouv:hover {
   background-color: #0d6efd;
   border-radius: 0.25rem;
@@ -60,10 +56,6 @@
 
 .Card-Title-Decouv {
   display: inline-block;
-}
-
-.Card-Title-Decouv:hover {
-  text-decoration: white;
 }
 
 .Card-Text-Desc-Decouv {

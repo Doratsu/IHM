@@ -15,13 +15,13 @@ export default class MenuListOutils extends Component {
             <hr></hr>
           </span>
           <li id="MenuListItem">
-            <a href="#Lexique" id="MenuListAnchor">
-              Lexique
+            <a href="#Dictionnaire" id="MenuListAnchor">
+              Dictionnaire
             </a>
           </li>
           <li id="MenuListItem">
-            <a href="#Dictionnaire" id="MenuListAnchor">
-              Dictionnaire
+            <a href="#Lexique" id="MenuListAnchor">
+              Lexique
             </a>
           </li>
         </ul>

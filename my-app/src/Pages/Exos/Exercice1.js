@@ -6,7 +6,21 @@ export default class Exercice1 extends Component {
   render() {
     return (
       <div>
-        <h1 className="ExTitle">Exercice 1 here soon</h1>
+        {/*<div id="LienExo">
+          <Link
+            id="TitleLien"
+            href="https://learningapps.org/tools/904/30/watch?id=p5y5yzru516"
+          >
+            LIEN
+          </Link>
+        </div>*/}
+        <object
+          type="text/html"
+          id="Exercice"
+          data="https://learningapps.org/tools/904/30/watch?id=p5y5yzru516"
+        >
+          Memory
+        </object>
       </div>
     );
   }

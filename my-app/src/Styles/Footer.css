@@ -20,9 +20,17 @@
   font-size: 18px;
   border: 1px solid #fff;
   vertical-align: middle;
+  background-color: #1c1e1f;
+  border-color: rgb(55, 60, 62);
 }
 
 .footer-Button {
   margin: 5px;
   padding: 8px;
+  color: rgb(135, 255, 205);
+  border-color: rgb(37, 201, 125);
+}
+
+.footer-Button:hover {
+  background-color: rgb(23, 124, 77);
 }

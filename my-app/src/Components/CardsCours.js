@@ -9,22 +9,21 @@ export default function CardsCours(props) {
   const { datasCours } = props;
   const firstCours = datasCours[0];
   return (
-    <div>
-      <section
-        key={firstCours.id}
-        className={
-          "product " +
-          (firstCours.category === "Vocabulaire"
-            ? "first"
-            : firstCours.category === "Conjugaison"
-            ? "second"
-            : "")
-        }
-      ></section>
+    <section
+      key={firstCours.id}
+      className={
+        "product " +
+        (firstCours.category === "Vocabulaire"
+          ? "first"
+          : firstCours.category === "Conjugaison"
+          ? "second"
+          : "")
+      }
+    >
       <Container>
-        <Row className="Row" xs={1} md={1}>
+        <Row id={`${firstCours.category}`} className="Row" xs={1} md={1}>
           <Col className="Col">
-            <h1 id={`${firstCours.category}`}>{firstCours.category}</h1>
+            <h1>{firstCours.category}</h1>
           </Col>
           {datasCours.map(({ id, name, difficulty, description }) => (
             <Card className="Card">
@@ -64,6 +63,6 @@ export default function CardsCours(props) {
           ))}
         </Row>
       </Container>
-    </div>
+    </section>
   );
 }
