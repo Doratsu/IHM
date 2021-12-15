@@ -18,38 +18,6 @@ import ArticleFootball from "../../Pages/Articles/ArticleFootball";
 import ArticlePeinture from "../../Pages/Articles/ArticlePeinture";
 
 export default class TopNavBarDefault extends Component {
-  constructor(props) {
-    super(props);
-    this.setLangue = this.setLangue.bind(this);
-    this.setLangueAnglais = this.setLangueAnglais.bind(this);
-    this.setLangueFrancais = this.setLangueFrancais.bind(this);
-    this.setBtnDisable = this.setBtnDisable.bind(this);
-    this.setBtnEnable = this.setBtnEnable.bind(this);
-    this.state = {
-      name: "Your Language",
-      link: "/",
-      value: true,
-    };
-  }
-
-  setLangue() {
-    this.setBtnDisable();
-    this.setState({ name: "Your Language", link: "/" });
-  }
-  setLangueAnglais() {
-    /*this.setBtnEnable();*/
-    this.setState({ name: "English", link: "/anglais" });
-  }
-  setLangueFrancais() {
-    /*this.setBtnEnable();*/
-    this.setState({ name: "Francais", link: "/francais" });
-  }
-  setBtnDisable(event) {
-    this.setState({ value: true });
-  }
-  setBtnEnable(event) {
-    this.setState({ value: false });
-  }
   render() {
     return (
       <Router>
@@ -59,24 +27,43 @@ export default class TopNavBarDefault extends Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link disabled={false} as={Link} to={this.state.link}>
+                <Nav.Link disabled={false} as={Link} to={this.props.state.link}>
                   Home
                 </Nav.Link>
-                <Nav.Link disabled={this.state.value} as={Link} to="/Cours">
+                <Nav.Link
+                  disabled={this.props.state.value}
+                  as={Link}
+                  to="/Cours"
+                >
                   Teachings
                 </Nav.Link>
-                <Nav.Link disabled={this.state.value} as={Link} to="/Decouvrir">
+                <Nav.Link
+                  disabled={this.props.state.value}
+                  as={Link}
+                  to="/Decouvrir"
+                >
                   Discover
                 </Nav.Link>
-                <Nav.Link disabled={this.state.value} as={Link} to="/Outils">
+                <Nav.Link
+                  disabled={this.props.state.value}
+                  as={Link}
+                  to="/Outils"
+                >
                   Tools
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
-          <NavDropdown title={this.state.name} id="basic-langue-nav-dropdown">
+          <NavDropdown
+            title={this.props.state.name}
+            id="basic-langue-nav-dropdown"
+          >
             <div>
-              <NavDropdown.Item as={Link} to="/" onClick={this.setLangue}>
+              <NavDropdown.Item
+                as={Link}
+                to="/"
+                onClick={this.props.defaultLangue}
+              >
                 Default
               </NavDropdown.Item>
             </div>
@@ -84,7 +71,7 @@ export default class TopNavBarDefault extends Component {
               <NavDropdown.Item
                 as={Link}
                 to="/anglais"
-                onClick={this.setLangueAnglais}
+                onClick={this.props.EnLangue}
               >
                 English
               </NavDropdown.Item>
@@ -93,7 +80,7 @@ export default class TopNavBarDefault extends Component {
               <NavDropdown.Item
                 as={Link}
                 to="/francais"
-                onClick={this.setLangueFrancais}
+                onClick={this.props.FrLangue}
               >
                 French
               </NavDropdown.Item>
@@ -111,8 +98,8 @@ export default class TopNavBarDefault extends Component {
               path="/Anglais"
               element={
                 <Anglais
-                  BtnEnable={this.setBtnEnable}
-                  BtnDisable={this.setBtnDisable}
+                  BtnDisable={this.props.BtnDisable}
+                  BtnEnable={this.props.BtnEnable}
                 />
               }
             ></Route>
@@ -120,8 +107,8 @@ export default class TopNavBarDefault extends Component {
               path="/Francais"
               element={
                 <Francais
-                  BtnEnable={this.setBtnEnable}
-                  BtnDisable={this.setBtnDisable}
+                  BtnDisable={this.props.BtnDisable}
+                  BtnEnable={this.props.BtnEnable}
                 />
               }
             ></Route>

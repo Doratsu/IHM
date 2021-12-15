@@ -21,15 +21,12 @@ export default class TopNavBar extends Component {
   }
 
   setLangue() {
-    this.setBtnDisable();
     this.setState({ name: "Your Language", link: "/" });
   }
   setLangueAnglais() {
-    this.setBtnEnable();
     this.setState({ name: "English", link: "/anglais" });
   }
   setLangueFrancais() {
-    this.setBtnEnable();
     this.setState({ name: "Francais", link: "/francais" });
   }
   setBtnDisable() {
@@ -40,11 +37,38 @@ export default class TopNavBar extends Component {
   }
   render() {
     if (this.state.link === "/") {
-      return <TopNavBarDefault />;
+      return (
+        <TopNavBarDefault
+          state={this.state}
+          BtnDisable={this.setBtnDisable}
+          BtnEnable={this.setBtnEnable}
+          defaultLangue={this.setLangue}
+          EnLangue={this.setLangueAnglais}
+          FrLangue={this.setLangueFrancais}
+        />
+      );
     } else if (this.state.link === "/anglais") {
-      return <TopNavBarEn />;
+      return (
+        <TopNavBarEn
+          state={this.state}
+          BtnDisable={this.setBtnDisable}
+          BtnEnable={this.setBtnEnable}
+          defaultLangue={this.setLangue}
+          EnLangue={this.setLangueAnglais}
+          FrLangue={this.setLangueFrancais}
+        />
+      );
     } else if (this.state.link === "/francais") {
-      return <TopNavBarFr />;
+      return (
+        <TopNavBarFr
+          state={this.state}
+          BtnDisable={this.setBtnDisable}
+          BtnEnable={this.setBtnEnable}
+          defaultLangue={this.setLangue}
+          EnLangue={this.setLangueAnglais}
+          FrLangue={this.setLangueFrancais}
+        />
+      );
     }
   }
 }
