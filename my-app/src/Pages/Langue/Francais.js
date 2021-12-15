@@ -13,9 +13,11 @@ export default class Francais extends Component {
     };
   }
   setLangueDefault() {
+    this.props.BtnDisable();
     this.setState({ name: "Choisissez" });
   }
   setLangueChoisis() {
+    this.props.BtnEnable();
     this.setState({ name: "Anglais" });
   }
   render() {

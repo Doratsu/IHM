@@ -44,10 +44,10 @@ export default class TopNavBarEn extends Component {
     this.setBtnEnable();
     this.setState({ name: "Francais", link: "/francais" });
   }
-  setBtnDisable() {
+  setBtnDisable(event) {
     this.setState({ value: true });
   }
-  setBtnEnable() {
+  setBtnEnable(event) {
     this.setState({ value: false });
   }
   render() {
@@ -107,8 +107,24 @@ export default class TopNavBarEn extends Component {
             <Route path="/Exercice" element={<Exercice />}></Route>
             <Route path="/Decouvrir" element={<Decouvrir />}></Route>
             <Route path="/Outils" element={<Outils />}></Route>
-            <Route path="/Anglais" element={<Anglais />}></Route>
-            <Route path="/Francais" element={<Francais />}></Route>
+            <Route
+              path="/Anglais"
+              element={
+                <Anglais
+                  BtnEnable={this.setBtnEnable}
+                  BtnDisable={this.setBtnDisable}
+                />
+              }
+            ></Route>
+            <Route
+              path="/Francais"
+              element={
+                <Francais
+                  BtnEnable={this.setBtnEnable}
+                  BtnDisable={this.setBtnDisable}
+                />
+              }
+            ></Route>
             <Route path="/Lecon1" element={<Lecon1 />}></Route>
             <Route path="/Exercice1" element={<Exercice1 />}></Route>
             <Route path="/Lecon2" element={<Lecon2 />}></Route>
